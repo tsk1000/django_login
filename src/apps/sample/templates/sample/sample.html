@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>サンプル画面</title>
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'sample/css/sample.css' %}">
+    <!-- js -->
+    <script src="{% static 'sample/js/sample.js' %}"></script>
+</head>
+
+<body>
+    <h1 class="sampleCss">ハロー Django</h1>
+    <button onclick="clickAction()">アクション ボタン</button>
+</body>
+</html>

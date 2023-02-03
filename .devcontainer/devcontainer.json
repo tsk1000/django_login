@@ -1,0 +1,45 @@
+{
+    "name": "dev-app",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "web",
+    "context": "..",
+    "workspaceFolder": "/dev-code",
+    "appPort": [
+        8000
+    ],
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.cursorSurroundingLinesStyle": "all",
+        "editor.formatOnSave": true,
+        "editor.tabCompletion": "on",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "workbench.startupEditor": "newUntitledFile",
+        "git.suggestSmartCommit": false,
+        "files.autoSave": "onFocusChange",
+        "files.exclude": {
+            "**/.mypy_cache": true,
+        },
+        "git.untrackedChanges": "separate",
+        "csscomb.preset": {},
+        "todo-tree.tree.showScanModeButton": false,
+        "python.pythonPath": "python3",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "python.linting.mypyEnabled": true,
+        "python.formatting.blackPath": "black",
+        "python.linting.flake8Path": "flake8",
+        "python.linting.mypyPath": "mypy",
+        "autoDocstring.startOnNewLine": true,
+        "autoDocstring.docstringFormat": "sphinx",
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "MS-CEINTL.vscode-language-pack-ja",
+        "ms-python.python",
+    ]
+}

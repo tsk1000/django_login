@@ -1,0 +1,3 @@
+function clickAction() {
+    alert("サンプル")
+}

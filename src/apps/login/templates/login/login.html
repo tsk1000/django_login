@@ -1,0 +1,27 @@
+<!doctype html>
+{% load static %}
+
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>ログイン</title>
+</head>
+
+<body>
+  <form action="" name="loginForm" method="post">
+    {% csrf_token %}
+    <h3>ログインID</h3>
+    {{ form.login_id }}
+    <h3>パスワード</h3>
+    {{ form.password }}
+    <button>ログイン</button>
+    <div>
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+    </div>
+  </form>
+</body>
+
+</html>

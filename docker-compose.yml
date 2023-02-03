@@ -1,0 +1,23 @@
+version: "3"
+services:
+  db:
+    container_name: "my-db"
+    image: postgres
+    ports:
+      - "5432:5432" # "out:in"
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    container_name: "my-container"
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./src/:/dev-code
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    environment:
+      TZ: Asia/Tokyo
